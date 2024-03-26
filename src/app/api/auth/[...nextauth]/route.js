@@ -9,7 +9,7 @@ import clientPromise from "@/libs/mongoConnect";
 
 
 
-const handler = NextAuth({
+export const handler = NextAuth({
   secret:process.env.SECRET,
   adapter: MongoDBAdapter(clientPromise),
   providers: [
