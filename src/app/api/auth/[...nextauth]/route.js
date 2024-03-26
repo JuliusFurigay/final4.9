@@ -43,7 +43,7 @@ export const authOptions = {
 
 // Removed the "isAdmin" function
 
-const handler = NextAuth(authOptions);
-export const GET = handler.handlers.GET;
-export const POST = handler.handlers.POST;
+export const handler = NextAuth(authOptions) as never;
+
+export { handler as GET, handler as POST };
 
